@@ -1,0 +1,45 @@
+th, tr, td {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+th {
+    border-radius: 3px;
+    background-color: aqua;
+}
+
+td:hover {
+    border-spacing: 10;
+    transition: background-color 0.3s;
+    background-color: #ff7300;
+    /* Cambia el color a naranja cuando se pasa el cursor */
+
+}
+
+table {
+    text-align: center;
+    border-spacing: 4px;
+}
+
+#españa {
+    background: linear-gradient(red, yellow, yellow, yellow, red);
+    cursor: pointer;
+
+}
+
+#argentina {
+    background: linear-gradient(aqua, white, white, aqua);
+    cursor: pointer;
+}
+
+#francia {
+    background: linear-gradient(to right, blue, white, white, red);
+    cursor: pointer;
+}
+
+#españa:active,
+#argentina:active,
+#francia:active {
+    background-image: none;
+    background-color: white;
+}
