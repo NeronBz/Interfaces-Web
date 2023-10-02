@@ -1,0 +1,14 @@
+.general {
+  width: 700px;
+  text-align: center;
+}
+
+img {
+  float: left;
+  width: 300px;
+  margin-right: 15px;
+}
+
+.div2 {
+  float: none;
+}
