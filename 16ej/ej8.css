@@ -1,24 +1,25 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .img-container {
-    float: left;
-    width: 33.33%;
-    padding: 5px;
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  text-align: center;
 }
 
 .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .footer {
-    background-color: grey;
-    padding: 15px;
+  background-color: grey;
+  padding: 15px;
 }
 
 #nombre {
-    float: right;
+  float: right;
 }
