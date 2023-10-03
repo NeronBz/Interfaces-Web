@@ -4,8 +4,7 @@
 
 #div2 {
   background-color: aqua;
-  clear: both;
-  float: none;
+  float: left;
   width: 50px;
   height: 30px;
 }
@@ -13,7 +12,7 @@
 #div3 {
   background-color: orange;
   float: left;
-  width: 500px;
+  width: 550px;
 }
 
 #div1 {
@@ -21,4 +20,8 @@
   float: right;
   width: 150px;
   height: 100px;
+}
+
+#div4 {
+  clear: both;
 }

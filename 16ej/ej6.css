@@ -1,6 +1,5 @@
 .general {
   width: 700px;
-  text-align: center;
 }
 
 img {
@@ -10,5 +9,5 @@ img {
 }
 
 .div2 {
-  float: none;
+  overflow: auto;
 }
