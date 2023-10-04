@@ -18,8 +18,13 @@
 .footer {
   background-color: grey;
   padding: 15px;
+  overflow: auto;
 }
 
 #nombre {
   float: right;
+}
+
+#foot {
+  float: left;
 }
