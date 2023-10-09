@@ -1,0 +1,33 @@
+.general {
+  width: 700px;
+}
+
+#div2 {
+  background-color: aqua;
+  float: left;
+  width: 150px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#div3 {
+  background-color: orange;
+  float: left;
+  width: 150px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#div1 {
+  background-color: pink;
+  float: right;
+  width: 150px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
