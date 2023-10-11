@@ -1,0 +1,33 @@
+div {
+    height: 100px;
+    width: 25%;
+    float: left;
+}
+
+.c1 {
+    background-color: gray;
+}
+
+.c2 {
+    background-color: rgb(196, 196, 196);
+}
+
+.c3 {
+    background-color: rgb(121, 168, 209);
+}
+
+.c4 {
+    background-color: rgb(84, 175, 255);
+}
+
+@media (max-width: 992px) {
+    div {
+        width: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    div {
+        width: 100%;
+    }
+}
