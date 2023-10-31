@@ -1,0 +1,15 @@
+1. a:link
+2. button:hover
+3. Selecciona el atributo que tenga el atributo de tipo submit cuando esté el usuario pulsándolo
+4. Selecciona los elementos que tengan el id "mi-id" cuando reciba el foco
+5. .mi-clase:visited
+6. input:enabled
+7. label:only-child
+8. Selecciona el segundo hijo que sea del elemento tr
+9. Selecciona el último hijo que sea h1
+10. li:nth-last-child(3)
+11. div.mi-clase:only-of-type
+12. input:checked
+13. Selecciona todos los campos que tengan required y que estén vacíos
+14. p:nth-of-type(3)
+15. label:only-child

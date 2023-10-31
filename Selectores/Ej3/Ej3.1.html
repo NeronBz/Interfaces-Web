@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #main-section :is(.header, .main, :not(.footer .main)) {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 3.1. Selecciona los elementos con clase main y los elementos con clase 
+    header que sean hijos directos de un elemento con id main-section. -->
+    <div id="main-section">
+      <div class="header">Soy un header</div>
+      <div class="main">Soy un main</div>
+      <div class="footer">
+        Soy un footer
+        <div class="main">Soy un main dentro de un footer</div>
+      </div>
+    </div>
+  </body>
+</html>
