@@ -1,0 +1,95 @@
+:root {
+  --color-fondo: #d3d3d3;
+}
+
+header {
+  background-color: var(--color-fondo);
+  padding: 30px;
+  text-align: right;
+}
+
+footer {
+  background-color: var(--color-fondo);
+  padding: 20px;
+  text-align: right;
+}
+
+footer img {
+  height: 40px;
+}
+
+#izquierda {
+  background-color: #d3ffd3;
+}
+#izquierda img {
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px 8px rgba(0, 0, 0, 1);
+  background-color: white;
+}
+#imagen {
+  float: left;
+  text-align: center;
+  margin-right: 20px;
+}
+#izquierda p {
+  margin: 0;
+}
+
+#rotulo {
+  background-color: black;
+  color: #d3d3d3;
+  font-size: x-large;
+}
+
+form {
+  background-color: #eee;
+}
+
+input,
+select {
+  width: 100%;
+}
+
+button {
+  background-color: green;
+  margin: 0 auto;
+  color: #d3d3d3;
+  display: block;
+  width: 60px;
+}
+
+#hola {
+  background-color: lightcoral;
+  float: left;
+  padding: 15px;
+  margin-right: 15px;
+}
+
+#adios {
+  background-color: lightgreen;
+  float: right;
+  padding: 15px;
+  margin-left: 15px;
+}
+
+@media (max-width: 899px) and (min-width: 600px) {
+  input,
+  select {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 599px) {
+  #hola,
+  #adios {
+    float: none;
+    margin: 0;
+  }
+}
+
+div #rotulo {
+  position: relative;
+  top: -20px;
+}
