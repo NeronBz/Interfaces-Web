@@ -1,0 +1,31 @@
+.div1 {
+  box-sizing: border-box;
+  padding: 20px;
+  width: 25%;
+  float: left;
+  background-color: aqua;
+}
+
+.div2 {
+  box-sizing: border-box;
+  padding: 20px;
+  width: 25%;
+  float: left;
+  background-color: antiquewhite;
+}
+
+.div3 {
+  box-sizing: border-box;
+  padding: 20px;
+  width: 25%;
+  float: left;
+  background-color: orangered;
+}
+
+.div4 {
+  box-sizing: border-box;
+  padding: 20px;
+  width: 25%;
+  float: left;
+  background-color: blue;
+}

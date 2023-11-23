@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+.img-container {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  text-align: center;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.footer {
+  background-color: grey;
+  padding: 15px;
+  overflow: auto;
+}
+
+#nombre {
+  float: right;
+}
+
+#foot {
+  float: left;
+}
