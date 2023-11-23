@@ -1,28 +1,33 @@
 .general {
-    width: 700px;
+  width: 700px;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 #div2 {
-    background-color: aqua;
-    float: left;
-    width: 50px;
-    height: 30px;
+  background-color: aqua;
+  width: 50px;
+  height: 30px;
 }
 
 #div3 {
-    background-color: orange;
-    float: left;
-    width: 550px;
+  background-color: orange;
+  width: 550px;
 }
 
 #div1 {
-    background-color: pink;
-    float: right;
-    width: 150px;
-    height: 100px;
+  background-color: pink;
+  width: 150px;
+  height: 100px;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: column;
 }
 
 #div4 {
-    clear: both;
-    margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 150px;
 }

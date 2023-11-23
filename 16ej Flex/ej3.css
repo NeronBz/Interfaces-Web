@@ -1,30 +1,27 @@
 .general {
   width: 700px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
 }
 
 #div2 {
   background-color: aqua;
-  display: flex;
   width: 50px;
   height: 30px;
 }
 
 #div3 {
   background-color: orange;
-  display: flex;
   width: 550px;
 }
 
-.container1 {
+#div1 {
   background-color: pink;
-  display: flex;
-  justify-content: flex-end;
   width: 150px;
   height: 100px;
 }
 
-#div4 {
-  clear: both;
+.container2 {
+  display: flex;
+  flex-direction: column;
 }

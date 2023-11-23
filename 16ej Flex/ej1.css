@@ -1,22 +1,15 @@
 .general {
-  width: 700px;
+  display: flex;
+  justify-content: space-between;
 }
 #div2 {
   background-color: aqua;
-  float: left;
   width: 150px;
   height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #div1 {
   background-color: pink;
-  float: right;
   width: 150px;
   height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
