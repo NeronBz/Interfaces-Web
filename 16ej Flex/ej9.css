@@ -1,31 +1,33 @@
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+.general {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.li {
-    float: left;
+.container1 {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
 }
 
 li a {
-    display: inline-block;
-    color: #eee;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  display: inline-block;
+  color: #eee;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 li a:hover {
-    background-color: red;
+  background-color: red;
 }
 
 #active {
-    background-color: red;
-}
-
-.salir {
-    float: right;
+  background-color: red;
 }

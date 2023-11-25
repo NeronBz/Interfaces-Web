@@ -6,39 +6,37 @@
     <title>Document</title>
     <link rel="stylesheet" href="ej10.css" />
     <style>
-      .logo {
-        float: right;
-      }
-
-      .navigation {
-        float: left;
-      }
-
       .header {
-        overflow: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
       }
 
       .sidebar {
-        float: left;
         height: 300px;
-        width: 15%;
       }
 
       .main-content {
-        overflow: auto;
+        display: flex;
       }
 
       .sub-content {
-        float: right;
-        width: 80%;
-        height: 150px;
+        height: 140px;
       }
 
       .sub-content-2 {
-        float: right;
-        height: 150px;
-        width: 80%;
-        margin-top: 20px;
+        height: 140px;
+      }
+
+      .container-sub-content {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        row-gap: 20px;
+      }
+
+      .container-sidebar {
+        width: 30%;
       }
     </style>
   </head>
@@ -49,9 +47,13 @@
         <div class="navigation">navigation</div>
       </div>
       <div class="main-content">
-        <div class="sidebar">sidebar</div>
-        <div class="sub-content">sub content</div>
-        <div class="sub-content-2">sub content 2</div>
+        <div class="container-sidebar">
+          <div class="sidebar">sidebar</div>
+        </div>
+        <div class="container-sub-content">
+          <div class="sub-content">sub content</div>
+          <div class="sub-content-2">sub content 2</div>
+        </div>
       </div>
       <div class="footer">footer</div>
     </div>

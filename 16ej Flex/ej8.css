@@ -3,28 +3,18 @@
 }
 
 .img-container {
-  float: left;
   width: 33.33%;
   padding: 5px;
   text-align: center;
 }
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+.general {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .footer {
   background-color: grey;
   padding: 15px;
-  overflow: auto;
-}
-
-#nombre {
-  float: right;
-}
-
-#foot {
-  float: left;
+  display: flex;
+  justify-content: space-between;
 }

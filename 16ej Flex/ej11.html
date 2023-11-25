@@ -6,38 +6,37 @@
     <title>Document</title>
     <link rel="stylesheet" href="ej10.css" />
     <style>
-      .logo {
-        float: left;
-      }
-
-      .navigation {
-        float: right;
-        width: 65%;
-      }
-
       .header {
-        overflow: auto;
+        display: flex;
+        justify-content: space-between;
       }
 
       .sidebar {
-        float: left;
         height: 300px;
-        width: 30%;
       }
 
       .main-content {
-        overflow: auto;
+        display: flex;
       }
 
-      .sub-content {
-        float: right;
-        width: 65%;
+      .container-navigation {
+        padding: 0;
       }
 
-      .sub-content-2 {
-        float: right;
-        width: 65%;
-        margin-top: 20px;
+      .container-sub-content {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        row-gap: 20px;
+      }
+
+      .container-sidebar {
+        width: 30%;
+      }
+
+      .container-navigation {
+        width: 70%;
+        padding: 0 20px 0 20px;
       }
     </style>
   </head>
@@ -45,12 +44,18 @@
     <div class="container">
       <div class="header">
         <div class="logo">logo</div>
-        <div class="navigation">navigation</div>
+        <div class="container-navigation">
+          <div class="navigation">navigation</div>
+        </div>
       </div>
       <div class="main-content">
-        <div class="sidebar">sidebar</div>
-        <div class="sub-content">sub content</div>
-        <div class="sub-content-2">sub content 2</div>
+        <div class="container-sidebar">
+          <div class="sidebar">sidebar</div>
+        </div>
+        <div class="container-sub-content">
+          <div class="sub-content">sub content</div>
+          <div class="sub-content-2">sub content 2</div>
+        </div>
       </div>
       <div class="footer">footer</div>
     </div>

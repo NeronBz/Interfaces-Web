@@ -1,9 +1,8 @@
+.general {
+  display: flex;
+  justify-content: flex-start;
+}
 img {
-  float: left;
   width: 300px;
   margin-right: 15px;
-}
-
-.div2 {
-  overflow: auto;
 }

@@ -17,10 +17,9 @@ body {
   padding: 15px;
 }
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+.general {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .menu {

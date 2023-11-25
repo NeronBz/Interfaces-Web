@@ -6,24 +6,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="ej10.css" />
     <style>
-      .container {
-        overflow: auto;
-      }
-
       .sidebar {
-        float: left;
         width: 33.3%;
         height: 300px;
       }
 
       .main-content {
-        float: left;
         width: 33.4%;
         height: 300px;
       }
 
       .sub-content {
-        float: left;
         width: 33.3%;
         height: 300px;
       }
@@ -32,16 +25,22 @@
         content: "";
         clear: both;
       }
+
+      .contenedor {
+        padding: 0;
+        display: flex;
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="header">header</div>
 
-      <div class="sidebar">sidebar</div>
-      <div class="main-content">main content</div>
-      <div class="sub-content">sub content</div>
-
+      <div class="contenedor">
+        <div class="sidebar">sidebar</div>
+        <div class="main-content">main content</div>
+        <div class="sub-content">sub content</div>
+      </div>
       <div class="footer">footer</div>
     </div>
   </body>

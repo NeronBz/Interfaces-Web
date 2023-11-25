@@ -1,8 +1,11 @@
+.general {
+  display: flex;
+  align-content: flex-start;
+}
 .div1 {
   box-sizing: border-box;
   padding: 20px;
   width: 25%;
-  float: left;
   background-color: aqua;
 }
 
@@ -10,7 +13,6 @@
   box-sizing: border-box;
   padding: 20px;
   width: 25%;
-  float: left;
   background-color: antiquewhite;
 }
 
@@ -18,7 +20,6 @@
   box-sizing: border-box;
   padding: 20px;
   width: 25%;
-  float: left;
   background-color: orangered;
 }
 
@@ -26,6 +27,5 @@
   box-sizing: border-box;
   padding: 20px;
   width: 25%;
-  float: left;
   background-color: blue;
 }
