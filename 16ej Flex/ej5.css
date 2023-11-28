@@ -2,30 +2,31 @@
   display: flex;
   align-content: flex-start;
 }
+
 .div1 {
   box-sizing: border-box;
   padding: 20px;
-  width: 25%;
+  flex: 1;
   background-color: aqua;
 }
 
 .div2 {
   box-sizing: border-box;
   padding: 20px;
-  width: 25%;
+  flex: 1;
   background-color: antiquewhite;
 }
 
 .div3 {
   box-sizing: border-box;
   padding: 20px;
-  width: 25%;
+  flex: 1;
   background-color: orangered;
 }
 
 .div4 {
   box-sizing: border-box;
   padding: 20px;
-  width: 25%;
+  flex: 1;
   background-color: blue;
 }

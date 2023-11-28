@@ -2,14 +2,13 @@
   display: flex;
   justify-content: space-between;
 }
+
 #div2 {
   background-color: aqua;
-  width: 150px;
-  height: 100px;
+  padding: 50px;
 }
 
 #div1 {
   background-color: pink;
-  width: 150px;
-  height: 100px;
+  padding: 50px;
 }

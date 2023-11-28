@@ -3,10 +3,10 @@
 }
 
 .img-container {
-  width: 33.33%;
   padding: 5px;
   text-align: center;
 }
+
 .general {
   display: flex;
   justify-content: flex-start;

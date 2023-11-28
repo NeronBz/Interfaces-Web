@@ -1,14 +1,13 @@
 .general {
   display: flex;
-  justify-content: space-between;
+  
   flex-wrap: wrap;
 }
 
-.container1 {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+.salir {
+  align-items: end;
 }
+
 ul {
   list-style-type: none;
   margin: 0;

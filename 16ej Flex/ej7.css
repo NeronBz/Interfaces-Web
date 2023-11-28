@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   background-color: white;
 }
@@ -13,7 +14,6 @@ body {
 }
 
 .column {
-  float: left;
   padding: 15px;
 }
 
@@ -23,11 +23,11 @@ body {
 }
 
 .menu {
-  width: 25%;
+  flex-basis: 25%;
 }
 
 .content {
-  width: 75%;
+  flex: 1;
 }
 
 .menu ul {
