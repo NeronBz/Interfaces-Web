@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="ej10.css" />
+    <style>
+      .container {
+        width: 1024px;
+        margin: 0 auto;
+        display: flex;
+      }
+
+      .sidebar {
+        flex: 1;
+        height: 300px;
+      }
+
+      .main-content {
+        flex: 1;
+        height: 300px;
+      }
+
+      .sub-content {
+        flex: 1;
+        height: 300px;
+      }
+
+      .footer {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">header</div>
+    <div class="container clearfix">
+      <div class="sidebar">sidebar</div>
+      <div class="main-content">main content</div>
+      <div class="sub-content">sub content</div>
+    </div>
+    <div class="footer">footer</div>
+  </body>
+</html>

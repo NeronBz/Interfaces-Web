@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .general {
+        display: flex;
+
+        flex-wrap: wrap;
+      }
+
+      .salir {
+        align-items: end;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #333;
+      }
+
+      li a {
+        display: inline-block;
+        color: #eee;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover {
+        background-color: red;
+      }
+
+      #active {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <div class="general">
+        <div class="container1">
+          <li><a href="#home" id="active" class="li">Inicio</a></li>
+          <li><a href="#news" class="li">Nosotros</a></li>
+          <li><a href="#contact" class="li">Productos</a></li>
+          <li><a href="#about" class="li">Contacto</a></li>
+        </div>
+        <div class="salir">
+          <li><a href="#salir" class="salir">Salir</a></li>
+        </div>
+      </div>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="ej10.css" />
+    <style>
+      .header {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .sidebar {
+        height: 300px;
+      }
+
+      .main-content {
+        display: flex;
+      }
+
+      .container-navigation {
+        padding: 0;
+      }
+
+      .container-sub-content {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        row-gap: 20px;
+      }
+
+      .container-sidebar {
+        flex-basis: 30%;
+      }
+
+      .container-navigation {
+        flex-basis: 70%;
+        padding: 0 20px 0 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo">logo</div>
+        <div class="container-navigation">
+          <div class="navigation">navigation</div>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="container-sidebar">
+          <div class="sidebar">sidebar</div>
+        </div>
+        <div class="container-sub-content">
+          <div class="sub-content">sub content</div>
+          <div class="sub-content-2">sub content 2</div>
+        </div>
+      </div>
+      <div class="footer">footer</div>
+    </div>
+  </body>
+</html>
