@@ -11,28 +11,16 @@
         width: 1024px;
       }
 
-      .sidebar {
-        flex: 1;
-        height: 300px;
-      }
-
-      .main-content {
-        flex: 1;
-        height: 300px;
-      }
-
+      .sidebar,
+      .main-content,
       .sub-content {
-        flex: 1;
         height: 300px;
-      }
-
-      .footer {
-        clear: both;
       }
 
       .contenedor {
         padding: 0;
-        display: flex;
+        display: grid;
+        grid-auto-flow: column;
       }
     </style>
   </head>

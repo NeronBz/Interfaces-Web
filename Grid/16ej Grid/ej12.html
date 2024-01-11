@@ -6,36 +6,22 @@
     <title>Document</title>
     <link rel="stylesheet" href="ej10.css" />
     <style>
-      .sidebar {
-        flex: 1;
-        height: 300px;
-      }
-
-      .main-content {
-        flex: 1;
-        height: 300px;
-      }
-
+      .sidebar,
+      .main-content,
       .sub-content {
-        flex: 1;
         height: 300px;
-      }
-
-      .footer {
-        content: "";
-        clear: both;
       }
 
       .contenedor {
         padding: 0;
-        display: flex;
+        display: grid;
+        grid-auto-flow: column;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="header">header</div>
-
       <div class="contenedor">
         <div class="sidebar">sidebar</div>
         <div class="main-content">main content</div>

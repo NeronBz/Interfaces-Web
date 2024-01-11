@@ -21,8 +21,8 @@
       .todo {
         border-bottom: 1px solid #ccc;
         padding-bottom: 8px;
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
       }
 
       /* Priority icon dot */
@@ -49,10 +49,6 @@
       .checkbox-right {
         margin: 35px 35px 0 0;
       }
-
-      .contenedor {
-        display: flex;
-      }
     </style>
   </head>
 
@@ -62,12 +58,10 @@
       <div class="todolist">
         <!-- To Do Item -->
         <div class="todo">
-          <div class="contenedor">
-            <div class="icon urgent">&#9679;</div>
-            <div class="todo-info">
-              <div class="todo-title">Pay Rent</div>
-              <div class="todo-date">April 1</div>
-            </div>
+          <div class="icon urgent">&#9679;</div>
+          <div class="todo-info">
+            <div class="todo-title">Pay Rent</div>
+            <div class="todo-date">April 1</div>
           </div>
           <div class="check">
             <input
@@ -82,12 +76,10 @@
 
         <!-- To Do Item -->
         <div class="todo">
-          <div class="contenedor">
-            <div class="icon urgent">&#9679;</div>
-            <div class="todo-info">
-              <div class="todo-title">Pay taxes</div>
-              <div class="todo-date">April 14</div>
-            </div>
+          <div class="icon urgent">&#9679;</div>
+          <div class="todo-info">
+            <div class="todo-title">Pay taxes</div>
+            <div class="todo-date">April 14</div>
           </div>
           <div class="check">
             <input
@@ -102,12 +94,10 @@
 
         <!-- To Do Item -->
         <div class="todo">
-          <div class="contenedor">
-            <div class="icon medium">&#9679;</div>
-            <div class="todo-info">
-              <div class="todo-title">Do floats homework</div>
-              <div class="todo-date">Monday, April 21</div>
-            </div>
+          <div class="icon medium">&#9679;</div>
+          <div class="todo-info">
+            <div class="todo-title">Do floats homework</div>
+            <div class="todo-date">Monday, April 21</div>
           </div>
           <div class="check">
             <input
@@ -122,12 +112,10 @@
 
         <!-- To Do Item -->
         <div class="todo">
-          <div class="contenedor">
-            <div class="icon medium">&#9679;</div>
-            <div class="todo-info">
-              <div class="todo-title">Get groceries</div>
-              <div class="todo-date">Friday, April 18</div>
-            </div>
+          <div class="icon medium">&#9679;</div>
+          <div class="todo-info">
+            <div class="todo-title">Get groceries</div>
+            <div class="todo-date">Friday, April 18</div>
           </div>
           <div class="check">
             <input
@@ -142,12 +130,10 @@
 
         <!-- To Do Item -->
         <div class="todo">
-          <div class="contenedor">
-            <div class="icon">&#9679;</div>
-            <div class="todo-info">
-              <div class="todo-title">Get a haircut</div>
-              <div class="todo-date">Friday, April 18</div>
-            </div>
+          <div class="icon">&#9679;</div>
+          <div class="todo-info">
+            <div class="todo-title">Get a haircut</div>
+            <div class="todo-date">Friday, April 18</div>
           </div>
           <div class="check">
             <input
