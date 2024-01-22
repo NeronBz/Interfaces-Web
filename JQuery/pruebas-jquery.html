@@ -4,20 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pruebas JQuery</title>
+    <script src="jquery-3.7.1.min.js"></script>
   </head>
   <body>
-    <input id="mi-boton" type="button" value="Enviar" />
+    <!-- <input id="mi-boton" type="button" value="Enviar" /> -->
 
-    <script src="jquery-3.7.1.min.js"></script>
+    <form>
+      <label for="checkbox"> Selecciona para habilitar el botón:</label>
+      <input type="checkbox" id="checkbox" />
+      <br />
+      <button id="submit-button" disabled>Enviar</button>
+    </form>
 
     <script>
       $(document).ready(function () {
-        $("#mi-boton").click(boton_click);
+        if ($("#checkbox").click()) {
+          if ($("#checkbox").prop("checked")) {
+            $("#submit-button").removeProp("disabled");
+          } else {
+            $("#submit-button").prop("disabled");
+          }
+        }
       });
-
-      function boton_click() {
-        alert("Has pulsado el botón");
-      }
     </script>
   </body>
 </html>
