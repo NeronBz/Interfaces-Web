@@ -5,10 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pruebas JQuery</title>
     <script src="jquery-3.7.1.min.js"></script>
+
+    <!-- Ejercicio 4 -->
+    <!-- <style>
+      #navbar {
+        display: flex;
+        background-color: black;
+      }
+
+      .nav-item {
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+      }
+
+      a.nav-item:hover,
+      a.active {
+        background-color: red;
+      }
+    </style> -->
   </head>
   <body>
-    <!-- <input id="mi-boton" type="button" value="Enviar" /> -->
-
+    <!-- Ejercicio 6
     <form>
       <label for="checkbox"> Selecciona para habilitar el botón:</label>
       <input type="checkbox" id="checkbox" />
@@ -18,13 +36,138 @@
 
     <script>
       $(document).ready(function () {
-        if ($("#checkbox").click()) {
-          if ($("#checkbox").prop("checked")) {
-            $("#submit-button").removeProp("disabled");
+        $("#checkbox").on("click", function () {
+          if ($("#checkbox").prop("checked") == true) {
+            $("#submit-button").prop("disabled", false);
           } else {
-            $("#submit-button").prop("disabled");
+            $("#submit-button").prop("disabled", true);
           }
-        }
+        });
+      });
+    </script> -->
+
+    <!-- Ejercicio 2 -->
+    <!-- <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae labore
+      nemo impedit quasi odit alias blanditiis, vero a sint, corrupti libero qui
+      consequuntur voluptatibus temporibus nam sapiente velit eveniet adipisci.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quam
+      dolorem, ipsa tempora eum pariatur dolorum rerum doloremque, minus
+      molestias aliquid? Sed dolor molestiae enim labore necessitatibus ex.
+      Labore, dolore.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim laborum
+      velit eius unde sapiente adipisci quae non quis, esse animi dicta quidem
+      iure cumque tempore totam? Veritatis quia odit sed!
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio laborum
+      at, ullam ut sequi ab totam neque illo veritatis, tempora fugit esse
+      earum, sunt quod ducimus? Vero ratione ipsum eligendi?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quod dolores
+      labore, ullam sed laudantium facere omnis doloremque. Reprehenderit
+      obcaecati quasi dolorum nulla? Natus laudantium consectetur non modi
+      ducimus fuga.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae labore
+      nemo impedit quasi odit alias blanditiis, vero a sint, corrupti libero qui
+      consequuntur voluptatibus temporibus nam sapiente velit eveniet adipisci.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quam
+      dolorem, ipsa tempora eum pariatur dolorum rerum doloremque, minus
+      molestias aliquid? Sed dolor molestiae enim labore necessitatibus ex.
+      Labore, dolore.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim laborum
+      velit eius unde sapiente adipisci quae non quis, esse animi dicta quidem
+      iure cumque tempore totam? Veritatis quia odit sed!
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio laborum
+      at, ullam ut sequi ab totam neque illo veritatis, tempora fugit esse
+      earum, sunt quod ducimus? Vero ratione ipsum eligendi?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quod dolores
+      labore, ullam sed laudantium facere omnis doloremque. Reprehenderit
+      obcaecati quasi dolorum nulla? Natus laudantium consectetur non modi
+      ducimus fuga.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae labore
+      nemo impedit quasi odit alias blanditiis, vero a sint, corrupti libero qui
+      consequuntur voluptatibus temporibus nam sapiente velit eveniet adipisci.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quam
+      dolorem, ipsa tempora eum pariatur dolorum rerum doloremque, minus
+      molestias aliquid? Sed dolor molestiae enim labore necessitatibus ex.
+      Labore, dolore.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim laborum
+      velit eius unde sapiente adipisci quae non quis, esse animi dicta quidem
+      iure cumque tempore totam? Veritatis quia odit sed!
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio laborum
+      at, ullam ut sequi ab totam neque illo veritatis, tempora fugit esse
+      earum, sunt quod ducimus? Vero ratione ipsum eligendi?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quod dolores
+      labore, ullam sed laudantium facere omnis doloremque. Reprehenderit
+      obcaecati quasi dolorum nulla? Natus laudantium consectetur non modi
+      ducimus fuga.
+    </p>
+    <script>
+      $(document).ready(function () {
+        $(window).on("scroll", function () {
+          $scrollTop = $(window).scrollTop();
+          console.log($scrollTop);
+        });
+      });
+    </script> -->
+
+    <!-- Ejercicio 4 -->
+
+    <!-- <nav id="navbar">
+      <a class="nav-item active" href="#">Inicio</a>
+      <a class="nav-item" href="#">Nosotros</a>
+      <a class="nav-item" href="#">Servicios</a>
+      <a class="nav-item" href="#">Contacto</a>
+    </nav>
+
+    <script>
+      $(document).ready(function () {
+        $("a").on("click", function () {
+          if ($("a").hasClass("active")) {
+            $("a").removeClass("active");
+          }
+          $(this).addClass("active");
+        });
+      });
+    </script> -->
+
+    <!-- Ejercicio 5 -->
+    <button id="my-button">Botón</button>
+    <input type="text" id="my-input" disabled />
+
+    <script>
+      $(document).ready(function () {
+        $("button").on("click", function () {
+          if ($("input").prop("disabled")) {
+            $("input").prop("disabled", false);
+          }
+        });
       });
     </script>
   </body>
