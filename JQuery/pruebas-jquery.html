@@ -24,10 +24,19 @@
         background-color: red;
       }
     </style> -->
+
+    <!-- Ejercicio 9 -->
+    <!-- <style>
+      #ejemplo {
+        width: 200px;
+        padding: 20px;
+        border: 10px solid black;
+      }
+    </style> -->
   </head>
   <body>
-    <!-- Ejercicio 6
-    <form>
+    <!-- Ejercicio 6 -->
+    <!-- <form>
       <label for="checkbox"> Selecciona para habilitar el botón:</label>
       <input type="checkbox" id="checkbox" />
       <br />
@@ -36,7 +45,7 @@
 
     <script>
       $(document).ready(function () {
-        $("#checkbox").on("click", function () {
+        $("#checkbox").on("change", function () {
           if ($("#checkbox").prop("checked") == true) {
             $("#submit-button").prop("disabled", false);
           } else {
@@ -148,25 +157,75 @@
 
     <script>
       $(document).ready(function () {
-        $("a").on("click", function () {
-          if ($("a").hasClass("active")) {
-            $("a").removeClass("active");
-          }
+        $(".nav-item").on("click", function () {
+          $(".nav-item").removeClass("active");
           $(this).addClass("active");
         });
       });
     </script> -->
 
     <!-- Ejercicio 5 -->
-    <button id="my-button">Botón</button>
+    <!-- <button id="my-button">Botón</button>
     <input type="text" id="my-input" disabled />
 
     <script>
       $(document).ready(function () {
         $("button").on("click", function () {
-          if ($("input").prop("disabled")) {
-            $("input").prop("disabled", false);
-          }
+          $("input").prop("disabled", false);
+        });
+      });
+    </script> -->
+
+    <!-- Ejercicio 1 -->
+    <!-- <label for="texto">Texto</label>
+    <textarea name="texto" id="texto" cols="30" rows="10"></textarea>
+    <label for="contador">Contador</label>
+    <textarea name="contador" id="contador" cols="30" rows="10"></textarea>
+
+    <script>
+      $(document).ready(function () {
+        $("#texto").on("input", function () {
+          $("#contador").text("Longitud: " + this.value.length);
+        });
+      });
+    </script> -->
+
+    <!-- Ejercicio 9 -->
+    <!-- <div id="ejemplo"></div>
+
+    <script>
+      $(document).ready(function () {
+        $width = $("#ejemplo").width();
+        $innerW = $("#ejemplo").innerWidth();
+        $outerW = $("#ejemplo").outerWidth();
+        console.log($width);
+        console.log($innerW);
+        console.log($outerW);
+      });
+    </script> -->
+
+    <button id="boton">Dale</button>
+    <div id="saludo" style="background-color: #bca; width: 100px">
+      Hola Mundo
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#boton").click(function () {
+          $("#saludo").animate(
+            {
+              width: "70%",
+              opacity: 0.5,
+              marginLeft: "1em",
+              fontSize: "3em",
+              borderWidth: "15px",
+            },
+            1500,
+            "swing",
+            function () {
+              $(this).html("Animación acabada");
+            }
+          );
         });
       });
     </script>
