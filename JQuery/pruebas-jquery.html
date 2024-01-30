@@ -204,7 +204,51 @@
       });
     </script> -->
 
-    <button id="boton">Dale</button>
+    <!-- Ejercicio 7 -->
+    <!-- <input type="radio" id="audi" name="brand" value="Audi" />
+    <label for="audi">Audi</label>
+
+    <input type="radio" id="mercedes" name="brand" value="Mercedes" />
+    <label for="mercedes">Mercedes</label>
+
+    <input type="radio" id="hyundai" name="brand" value="Hyundai" />
+    <label for="hyundai">Hyundai</label>
+
+    <p id="message"></p>
+
+    <script>
+      $(document).ready(function () {
+        $("input").on("change", function () {
+          if ($(this).prop("checked") == true) {
+            $("#message").text($(this).val());
+          }
+        });
+      });
+    </script> -->
+
+    <!-- Ejercicio 8 -->
+    <input type="checkbox" id="audi" name="brand" value="Audi" />
+    <label for="audi">Audi</label>
+    <input type="checkbox" id="mercedes" name="brand" value="Mercedes" />
+    <label for="mercedes">Mercedes</label>
+    <input type="checkbox" id="hyundai" name="brand" value="Hyundai" />
+    <label for="hyundai">Hyundai</label>
+    <p id="message"></p>
+
+    <script>
+      $(document).ready(function () {
+        $("input").on("change", function () {
+          $("#message").text("");
+          $("input").each(function () {
+            if ($(this).prop("checked") == true) {
+              $("#message").append($(this).val() + " ");
+            }
+          });
+        });
+      });
+    </script>
+
+    <!-- <button id="boton">Dale</button>
     <div id="saludo" style="background-color: #bca; width: 100px">
       Hola Mundo
     </div>
@@ -228,6 +272,59 @@
           );
         });
       });
-    </script>
+    </script> -->
+    <!-- <style>
+      div {
+        border: 1px solid black;
+        background-color: #ccc;
+        margin-block: 0.5em;
+      }
+    </style>
+
+    <input type="button" value="before" id="btn-before" />
+    <input type="button" value="insertBefore" id="btn-insertBefore" />
+    <input type="button" value="prepend" id="btn-prepend" />
+    <input type="button" value="prependTo" id="btn-prependTo" />
+
+    <div>Div 1</div>
+    <div>Div 2</div>
+    <div>Div 3</div>
+
+    <script>
+      $(document).ready(function () {
+        $("#btn-before").on("click", function () {
+          $("div").before("<h3>before</h3>");
+        });
+
+        $("#btn-insertBefore").on("click", function () {
+          $("<h3>insertBefore</h3>").insertBefore("div");
+        });
+
+        $("#btn-prepend").on("click", function () {
+          $("div").prepend("<h3>prepend</h3>");
+        });
+
+        $("#btn-prependTo").on("click", function () {
+          $("<h3>prependTo</h3>").prependTo("div");
+        });
+      });
+    </script> -->
+    <!-- <input type="button" id="boton" value="Cargar HTML externo" />
+    <div id="cargaexterna">Aquí se cargará el HTML externo</div>
+
+    <script>
+      $(document).ready(function () {
+        $("#boton").click(function () {
+          $.ajax({
+            method: "GET",
+            url: "mi-otra-pagina.php",
+            success: function (data, textStatus, jqXHR) {
+              $("#cargaexterna").html(data);
+            },
+            data: { coche: "Ford", modelo: "Focus", color: "rojo" },
+          });
+        });
+      });
+    </script> -->
   </body>
 </html>
