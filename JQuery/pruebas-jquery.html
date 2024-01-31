@@ -219,15 +219,13 @@
     <script>
       $(document).ready(function () {
         $("input").on("change", function () {
-          if ($(this).prop("checked") == true) {
-            $("#message").text($(this).val());
-          }
+          $("#message").text($(this).val());
         });
       });
     </script> -->
 
     <!-- Ejercicio 8 -->
-    <input type="checkbox" id="audi" name="brand" value="Audi" />
+    <!-- <input type="checkbox" id="audi" name="brand" value="Audi" />
     <label for="audi">Audi</label>
     <input type="checkbox" id="mercedes" name="brand" value="Mercedes" />
     <label for="mercedes">Mercedes</label>
@@ -244,6 +242,48 @@
               $("#message").append($(this).val() + " ");
             }
           });
+        });
+      });
+    </script> -->
+
+    <!-- Ejercicio 10 -->
+    <form id="login-form">
+      <input
+        type="text"
+        name="username"
+        id="username"
+        placeholder="Nombre de Usuario"
+      />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Contraseña"
+      />
+      <input type="submit" id="submit-btn" value="Iniciar Sesión" />
+    </form>
+
+    <script>
+      $(document).ready(function () {
+        $("#submit-btn").on("submit", function (e) {
+          var alerta = document.createElement("div");
+          alerta.id = "alert";
+          var value1 = $.trim($("#username").val());
+          var value2 = $.trim($("#password").val());
+          e.preventDefault();
+          $("#alert").hide();
+          if (value1.length == 0 && value2.length == 0) {
+            $("#login-form").append(
+              "<div id='alert'>Username y password vacíos</div>"
+            );
+            $("#alert").slideDown("slow");
+          } else if (value2.length == 0) {
+            $("#alert").text("Contraseña vacía");
+            slideDown();
+          } else if (value1.length == 0) {
+            $("#alert").text("Username vacío");
+            slideDown();
+          }
         });
       });
     </script>
