@@ -477,7 +477,12 @@
             url: "jquery-ej-13-coches.json",
             type: "GET",
             success: function (data) {
-              // Inserta aquí tu código
+              $.each(data, function (item, index) {
+                $("#respuesta").append("<ul id='lista'>" + index.marca);
+                $.each(index.coches, function (indice, value) {
+                  $("#lista").append("<li>" + value.modelo + "</li>");
+                }) + "</ul>";
+              });
             },
           });
         });
