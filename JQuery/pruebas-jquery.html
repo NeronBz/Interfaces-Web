@@ -33,6 +33,33 @@
         border: 10px solid black;
       }
     </style> -->
+
+    <!-- Ejercicio 16 -->
+    <!-- <style>
+      header {
+        background-color: lightblue;
+        height: 100px;
+      }
+
+      main {
+        display: grid;
+        grid-template-columns: 1fr minmax(200px, auto);
+      }
+
+      section {
+        background-color: lightcoral;
+        min-height: 200px;
+      }
+
+      aside {
+        background-color: lightgoldenrodyellow;
+      }
+
+      footer {
+        background-color: lightgreen;
+        height: 100px;
+      }
+    </style> -->
   </head>
   <body>
     <!-- Ejercicio 6 -->
@@ -467,7 +494,7 @@
       </script> -->
 
     <!-- Ejercicio 13 -->
-    <input type="button" value="Actualizar" id="refresh" />
+    <!-- <input type="button" value="Actualizar" id="refresh" />
     <div id="respuesta"></div>
 
     <script>
@@ -478,15 +505,83 @@
             type: "GET",
             success: function (data) {
               $.each(data, function (item, index) {
-                $("#respuesta").append("<ul id='lista'>" + index.marca);
+                $("#respuesta").append("<ol>" + index.marca);
                 $.each(index.coches, function (indice, value) {
-                  $("#lista").append("<li>" + value.modelo + "</li>");
-                }) + "</ul>";
+                  $("#respuesta").append(
+                    "<li>modelo: " +
+                      value.modelo +
+                      ", color: " +
+                      value.color +
+                      ", precio: " +
+                      value.precio +
+                      "</li>"
+                  );
+                }) + "</ol>";
               });
             },
           });
         });
       });
-    </script>
+    </script> -->
+    <!-- Ejercicio 16 -->
+    <!-- <header>header</header>
+    <main>
+      <section>section</section>
+      <aside id="res">aside</aside>
+    </main>
+    <footer>footer</footer>
+
+    <script>
+      $(document).ready(function () {
+        $("#res").load("ej16-resultados.txt", function () {
+          setInterval(cargar, 5000);
+        });
+        function cargar() {
+          $("#res").fadeOut("slow");
+          $("#res").fadeIn("slow");
+        }
+      });
+    </script> -->
+
+    <!-- Ejercicio 17 -->
+    <!-- <h2>Formulario de Entrantes</h2>
+    <form id="form-entrantes">
+      <label for="select-entrantes">Entrantes:</label>
+      <select id="select-entrantes">
+        <option value="none" selected>Selecciona entrante</option>
+        <option value="patatas">Patatas Fritas</option>
+        <option value="nuggets">Nuggets de Pollo</option></select
+      ><br /><br />
+
+      <div
+        id="salsas"
+        style="display: none; padding: 0.5em; border: 1px solid #333"
+      ></div>
+      <br />
+
+      <button type="submit">Enviar</button>
+    </form>
+    <br />
+    <div id="error" style="color: red"></div>
+    <div id="resultado" style="color: green"></div>
+
+    <script>
+      $(document).ready(function () {
+        $("select").on("change", function () {
+          if ($("select > :nth-child(2)").prop("selected") == true) {
+            $("#salsas").load("patatas.html", cargar);
+          } else if ($("select > :nth-child(3)").prop("selected") == true) {
+            $("#salsas").load("nuggets.html", cargar);
+          }
+        });
+        $("form").on("submit", function(){
+
+        })
+        function cargar() {
+          $("#salsas").slideUp();
+          $("#salsas").slideDown();
+        }
+      });
+    </script> -->
   </body>
 </html>
