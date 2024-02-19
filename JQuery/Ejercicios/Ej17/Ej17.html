@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 17</title>
+    <script src="jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <h2>Formulario de Entrantes</h2>
+    <form id="form-entrantes">
+      <label for="select-entrantes">Entrantes:</label>
+      <select id="select-entrantes">
+        <option value="none" selected>Selecciona entrante</option>
+        <option value="patatas">Patatas Fritas</option>
+        <option value="nuggets">Nuggets de Pollo</option></select
+      ><br /><br />
+
+      <div
+        id="salsas"
+        style="display: none; padding: 0.5em; border: 1px solid #333"
+      ></div>
+      <br />
+
+      <button type="submit">Enviar</button>
+    </form>
+    <br />
+    <div id="error" style="color: red"></div>
+    <div id="resultado" style="color: green"></div>
+
+    <script>
+      $(document).ready(function () {
+        $("select").on("change", function () {
+          $("#error").empty();
+          $("#resultado").empty();
+          $("#salsas").hide();
+
+          var $entranteSeleccionado = $(this).val();
+          if ($entranteSeleccionado == "patatas") {
+            $("#salsas").load("patatas.html").slideDown();
+          } else if ($entranteSeleccionado == "nuggets") {
+            $("#salsas").load("nuggets.html").slideDown();
+          } else {
+            $("#salsas").empty();
+          }
+        });
+
+        $("#form-entrantes").on("submit", function (e) {
+          e.preventDefault();
+
+          var $select = $("#select-entrantes");
+          if ($select.val() == "none") {
+            $("#error").text("Por favor, selecciona una opción correcta");
+          } else {
+            var $salsaSeleccionada = $('input[name="salsa"]:checked');
+            if ($salsaSeleccionada.length == 0) {
+              $("#error").text("Por favor, selecciona una salsa");
+            } else {
+              $("#error").empty();
+              $("#resultado").text(
+                "Has seleccionado el entrante " +
+                  $select.val() +
+                  ", y la salsa " +
+                  $salsaSeleccionada.val()
+              );
+            }
+          }
+        });
+        $("#salsas").on("change", 'input[name="salsa"]:checked', function () {
+          $($padreSalsa).remove($tick);
+          var $salsaSeleccionada = $('input[name="salsa"]:checked');
+          var $hermano = $($salsaSeleccionada).siblings();
+          var $padreSalsa = $(this).parent();
+          var $tick = '<span style="color: green">✓</span>';
+          $($hermano).append($tick);
+        });
+      });
+    </script>
+  </body>
+</html>

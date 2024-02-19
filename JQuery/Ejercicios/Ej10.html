@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 10</title>
+    <script src="jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <form id="login-form">
+      <input
+        type="text"
+        name="username"
+        id="username"
+        placeholder="Nombre de Usuario"
+      />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Contraseña"
+      />
+      <input type="submit" id="submit-btn" value="Iniciar Sesión" />
+    </form>
+
+    <script>
+      $(document).ready(function () {
+        $("#login-form").on("submit", function (e) {
+          e.preventDefault();
+          var value1 = $("#username").val();
+          var value2 = $("#password").val();
+          $("#alert").hide();
+          if (value1.trim() == "" && value2.trim() == "") {
+            if ($("alert").length === 0) {
+            }
+            $("#login-form").after("Username y password vacíos");
+            $("#alert").slideDown("slow");
+          } else if (value2.length == 0) {
+            $("#alert").text("Contraseña vacía");
+            slideDown();
+          } else if (value1.length == 0) {
+            $("#alert").text("Username vacío");
+            slideDown();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
