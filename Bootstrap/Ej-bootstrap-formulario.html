@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container-md">
+      <div class="text-center">
+        <h1>Formulario de Registro</h1>
+      </div>
+      <div class="row">
+        <div class="mb-3 col-md-6">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" />
+        </div>
+        <div class="mb-3 col-md-6">
+          <label for="apellidos" class="form-label">Apellidos</label>
+          <input type="text" class="form-control" id="apellidos" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="mb-3 col-md-6">
+          <div class="form-floating">
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder=""
+            />
+            <label for="floatingInput">Email</label>
+          </div>
+        </div>
+        <div class="mb-3 col-md-6">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="tlf" placeholder="" />
+            <label for="tlf" class="form-label">Teléfono</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="mb-3 col-md-6">
+          <label for="poblacion" class="form-label">Población</label>
+          <input type="text" class="form-control" id="poblacion" />
+        </div>
+        <div class="mb-3 col-md-6">
+          <label for="exampleDataList" class="form-label">Provincia</label>
+          <input
+            class="form-control"
+            list="datalistOptions"
+            id="exampleDataList"
+          />
+          <datalist id="datalistOptions">
+            <option value="Cáceres"></option>
+            <option value="Badajoz"></option>
+          </datalist>
+        </div>
+      </div>
+      <div class="row">
+        <div class="mb-3 col-md-6">
+          <label class="visually-hidden" for="autoSizingInputGroup"
+            >Twitter</label
+          >
+          <div class="input-group">
+            <div class="input-group-text">@</div>
+            <input
+              type="text"
+              class="form-control"
+              id="autoSizingInputGroup"
+              placeholder="Twitter"
+            />
+          </div>
+        </div>
+        <div class="mb-3 col-md-6">
+          <label class="visually-hidden" for="autoSizingInputGroup"
+            >Página Web</label
+          >
+          <div class="input-group">
+            <div class="input-group-text">🌐</div>
+            <input
+              type="text"
+              class="form-control"
+              id="autoSizingInputGroup"
+              placeholder="Página Web"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="mb-3 col-md-6">
+          <label for="user" class="form-label">Nombre de Usuario</label>
+          <input type="text" class="form-control" id="user" />
+        </div>
+        <div class="mb-3 col-md-6">
+          <label for="pwd" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="pwd" />
+        </div>
+      </div>
+      <div class="d-flex justify-content-md-center">
+        <div
+          class="btn-group"
+          role="group"
+          aria-label="Basic radio toggle button group"
+        >
+          <input
+            type="radio"
+            class="btn-check"
+            name="btnradio"
+            id="btnradio1"
+            autocomplete="off"
+            checked
+          />
+          <label class="btn btn-outline-success" for="btnradio1"
+            >Soy profesor</label
+          >
+
+          <input
+            type="radio"
+            class="btn-check"
+            name="btnradio"
+            id="btnradio2"
+            autocomplete="off"
+          />
+          <label class="btn btn-outline-warning" for="btnradio2"
+            >Soy alumno</label
+          >
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary">Registrarse</button>
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          role="switch"
+          id="flexSwitchCheckDefault"
+        />
+        <label class="form-check-label" for="flexSwitchCheckDefault"
+          >He leído y acepto las condiciones de privacidad</label
+        >
+      </div>
+    </div>
+  </body>
+</html>
