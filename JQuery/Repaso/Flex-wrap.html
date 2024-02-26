@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        font-size: 1rem;
+      }
+
+      h2 {
+        text-align: center;
+        font-family: "Consolas", "Lucida Console", "Courier New", Courier,
+          monospace;
+        padding: 10px;
+        margin: 0px 0px 10px 0px;
+        font-size: 1.25rem;
+      }
+
+      #options {
+        display: flex;
+      }
+
+      #options > * {
+        margin: 0px 10px 20px 0px;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: 5px 10px;
+        background-color: #ccc;
+      }
+
+      #options > *.active:not(.no-effect),
+      #options > *:hover:not(.no-effect) {
+        background-color: #333;
+        color: white;
+      }
+
+      #anchura-contenedor-value {
+        background-color: #fff;
+        font-size: 0.875em;
+        text-align: center;
+        border-radius: 8px;
+        padding: 3px 6px;
+        margin: 0px 10px;
+      }
+
+      #contenedor-flex {
+        background-color: #ccc;
+        display: flex;
+        flex-wrap: wrap;
+        width: 200px;
+        padding: 10px 0px;
+      }
+
+      .item {
+        background-color: #777;
+        border: 1px solid black;
+        padding: 20px;
+      }
+
+      code {
+        background-color: lightgrey;
+        padding: 2px 6px;
+        font-family: "Consolas", "Lucida Console", "Courier New", Courier,
+          monospace;
+        font-size: 0.875rem;
+      }
+
+      p {
+        line-height: 1.5;
+      }
+
+      label,
+      input[type="checkbox"] {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>flex-wrap</h2>
+    <div id="options">
+      <div>nowrap</div>
+      <div>wrap</div>
+      <div>wrap-reverse</div>
+      <div class="no-effect">
+        <label for="anchura-contenedor"
+          >Anchura del contenedor (100-200px):
+        </label>
+        <div id="anchura-contenedor-value">200</div>
+        <input
+          type="range"
+          id="anchura-contenedor"
+          name="anchura-contenedor"
+          min="25"
+          max="200"
+          value="200"
+        />
+      </div>
+    </div>
+
+    <div style="margin-bottom: 20px">
+      <input
+        type="checkbox"
+        id="cb-overflow-hidden"
+        name="cb-overflow-hidden"
+      />
+      <label for="cb-overflow-hidden"
+        >Activar <code>overflow: hidden</code></label
+      >
+    </div>
+
+    <div id="contenedor-flex">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#options>*:not(.no-effect)").on("click", function () {
+          $("#contenedor-flex").css("flex-wrap", $(this).html());
+
+          $("#options>*").each(function () {
+            $(this).removeClass("active");
+          });
+          $(this).addClass("active");
+        });
+
+        $("#options>*:nth-child(1)").click();
+
+        $("#cb-overflow-hidden").change(function () {
+          if ($(this).is(":checked")) {
+            $("#contenedor-flex").css("overflow", "hidden");
+          } else {
+            $("#contenedor-flex").css("overflow", "visible"); // O cualquier otro valor que desees
+          }
+        });
+
+        $("#anchura-contenedor").on("input", function () {
+          $("#anchura-contenedor-value").html($(this).val());
+          $("#contenedor-flex").css("width", $(this).val());
+        });
+      });
+    </script>
+  </body>
+</html>

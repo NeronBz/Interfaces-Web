@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        font-size: 1rem;
+      }
+
+      h2 {
+        text-align: center;
+        font-family: "Consolas", "Lucida Console", "Courier New", Courier,
+          monospace;
+        padding: 10px;
+        margin: 0px 0px 10px 0px;
+        font-size: 1.25rem;
+      }
+
+      #options {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      #options > * {
+        border-radius: 10px;
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        align-items: center;
+        padding: 5px 10px;
+        background-color: #ccc;
+      }
+
+      #gap-value,
+      #row-gap-value,
+      #column-gap-value {
+        background-color: #fff;
+        font-size: 0.875em;
+        text-align: center;
+        border-radius: 8px;
+        padding: 3px 6px;
+        margin: 0px 10px;
+        width: 35px;
+      }
+
+      #contenedor-flex {
+        display: flex;
+        background-color: #ccc;
+        flex-wrap: wrap;
+        padding: 20px;
+        width: 160px;
+      }
+
+      .item {
+        background-color: #777;
+        border: 1px solid black;
+        padding: 20px;
+      }
+
+      code {
+        background-color: lightgrey;
+        padding: 2px 5px;
+        font-family: "Consolas", "Lucida Console", "Courier New", Courier,
+          monospace;
+        font-size: 0.875rem;
+      }
+
+      p {
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>gap | row-gap | column-gap</h2>
+    <div id="options">
+      <div>
+        <label for="gap-slider">gap: </label>
+        <div id="gap-value">0</div>
+        <input
+          type="range"
+          id="gap-slider"
+          name="gap-slider"
+          min="0"
+          max="100"
+          value="0"
+        />
+      </div>
+
+      <div>
+        <label for="row-gap-slider">row-gap: </label>
+        <div id="row-gap-value">0</div>
+        <input
+          type="range"
+          id="row-gap-slider"
+          name="row-gap-slider"
+          min="0"
+          max="100"
+          value="0"
+        />
+      </div>
+
+      <div>
+        <label for="column-gap-slider">column-gap: </label>
+        <div id="column-gap-value">0</div>
+        <input
+          type="range"
+          id="column-gap-slider"
+          name="column-gap-slider"
+          min="0"
+          max="100"
+          value="0"
+        />
+      </div>
+    </div>
+
+    <div id="contenedor-flex">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#options input").on("input", function () {
+          var divHermano = $(this).siblings("div");
+          divHermano.html($(this).val());
+          $("#contenedor-flex").css("gap", $(this).val());
+          console.log($(this).val());
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        font-size: 1rem;
+      }
+
+      h2 {
+        text-align: center;
+        font-family: "Consolas", "Lucida Console", "Courier New", Courier,
+          monospace;
+        padding: 10px;
+        margin: 0px 0px 10px 0px;
+        font-size: 1.25rem;
+      }
+
+      #options {
+        display: flex;
+      }
+
+      #options > * {
+        margin: 0px 10px 20px 0px;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        padding: 5px 10px;
+        background-color: #ccc;
+      }
+
+      #options > *.active,
+      #options > *:hover {
+        background-color: #333;
+        color: white;
+      }
+
+      #contenedor-flex {
+        background-color: #ccc;
+        padding: 20px;
+        width: 500px;
+        height: 300px;
+        display: flex;
+      }
+
+      .item {
+        background-color: #777;
+        border: 1px solid black;
+        padding: 20px;
+      }
+
+      code {
+        background-color: lightgrey;
+        padding: 2px 5px;
+        font-family: "Consolas", "Lucida Console", "Courier New", Courier,
+          monospace;
+        font-size: 0.875rem;
+      }
+
+      p {
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>flex-direction</h2>
+    <div id="options">
+      <div>row</div>
+      <div>row-reverse</div>
+      <div>column</div>
+      <div>column-reverse</div>
+    </div>
+    <div id="contenedor-flex">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#options>*").on("click", function () {
+          $("#contenedor-flex").css("flex-direction", $(this).html());
+
+          $("#options>*").each(function () {
+            $(this).removeClass("active");
+          });
+          $(this).addClass("active");
+        });
+        $("#options>*:nth-child(1)").click();
+      });
+    </script>
+  </body>
+</html>
