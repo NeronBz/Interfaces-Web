@@ -128,11 +128,20 @@
 
     <script>
       $(document).ready(function () {
-        $("#options input").on("input", function () {
-          var divHermano = $(this).siblings("div");
-          divHermano.html($(this).val());
-          $("#contenedor-flex").css("gap", $(this).val());
-          console.log($(this).val());
+        function ajustarGap(elemento, propiedad) {
+          var divHermano = elemento.siblings("div");
+          divHermano.html(elemento.val());
+          $("#contenedor-flex").css(propiedad, elemento.val() + "px");
+        }
+
+        $("input").on("input", function () {
+          if ($(this).is("#gap-slider")) {
+            ajustarGap($(this), "gap");
+          } else if ($(this).is("#row-gap-slider")) {
+            ajustarGap($(this), "row-gap");
+          } else if ($(this).is("#column-gap-slider")) {
+            ajustarGap($(this), "column-gap");
+          }
         });
       });
     </script>
