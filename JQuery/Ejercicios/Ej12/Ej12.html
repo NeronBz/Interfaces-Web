@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejercicio 12</title>
-    <script src="jquery-3.7.1.min.js"></script>
+    <script src="../../jquery-3.7.1.min.js"></script>
   </head>
   <body>
     <form id="form-login">
@@ -24,7 +24,7 @@
           var usuario = $("#username").val();
           var contraseña = $("#password").val();
           $.ajax({
-            url: "jquery-ej-12-login.txt",
+            url: "jquery-ej-12-login.json",
             type: "GET",
             data: {
               usuario: usuario,
