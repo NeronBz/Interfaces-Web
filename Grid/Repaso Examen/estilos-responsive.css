@@ -1,0 +1,84 @@
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+
+    /* Main */
+    main>div:nth-child(1) {
+        grid-area: azul;
+    }
+
+    main>div:nth-child(2) {
+        grid-area: gris;
+    }
+
+    main>div:nth-child(3) {
+        grid-area: verde;
+        align-self: center;
+        justify-self: center;
+    }
+
+    main>div:nth-child(4) {
+        grid-area: nube;
+        display: grid;
+        align-content: center;
+    }
+
+    main>div:nth-child(5) {
+        grid-area: rojo;
+    }
+
+    main>div:nth-child(6) {
+        grid-area: cielo;
+        justify-self: center;
+    }
+
+    main {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            'azul azul azul azul'
+            'gris verde verde verde'
+            'nube nube rojo rojo'
+            'cielo cielo cielo cielo';
+    }
+}
+
+@media only screen and (min-width: 900px) {
+
+    /* Main */
+    main {
+        grid-template-columns: min-content 1fr auto;
+        grid-template-areas:
+            'azul gris verde'
+            'nube rojo cielo';
+    }
+
+    main>div:nth-child(1) {
+        grid-area: azul;
+    }
+
+    main>div:nth-child(2) {
+        grid-area: gris;
+        justify-self: end;
+        align-self: center;
+    }
+
+    main>div:nth-child(3) {
+        grid-area: verde;
+        align-self: center;
+        justify-self: center;
+    }
+
+    main>div:nth-child(4) {
+        grid-area: nube;
+    }
+
+    main>div:nth-child(5) {
+        grid-area: rojo;
+        align-self: center;
+    }
+
+    main>div:nth-child(6) {
+        grid-area: cielo;
+        display: grid;
+        justify-content: end;
+        align-content: end;
+    }
+}
